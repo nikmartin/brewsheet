@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Brew Sheet</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -47,71 +47,84 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+        <!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
+      <span id="clock" class="label label-default">loading...</span>
+      <h1>Brew Sheet</h1>
+      <p class="lead">Lets brew sheet!</p>
+      <form class="form-horizontal">
+        <fieldset>
 
-      <div class="starter-template">
-        <h1>Brew Sheet</h1>
-        <p class="lead">Lets brew sheet!</p>
-        <form class="form-horizontal">
-<fieldset>
+          <!-- Form Name -->
+          <legend>Recipe</legend>
 
-<!-- Form Name -->
-<legend>Recipe</legend>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="recipeName">Recipe Name</label>
+            <div class="col-md-4">
+              <input id="recipeName" name="recipeName" type="text" placeholder="Strange Brew" class="form-control input-md" required="">
+              <span class="help-block">What's this delicious nectar called?</span>
+            </div>
+          </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="recipeName">Recipe Name</label>
-  <div class="col-md-4">
-  <input id="recipeName" name="recipeName" type="text" placeholder="Strange Brew" class="form-control input-md" required="">
-  <span class="help-block">What's this delicious nectar called?</span>
-  </div>
-</div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class=" col-sm-2 control-label" for="mashTime">Mash Time</label>
+            <div class="col-md-4">
+              <input id="mashTime" name="mashTime" type="text" placeholder="Minutes" class="form-control input-md" required="">
+              <span class="help-block">How long does this brew need to mash?</span>
+            </div>
+          </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="mashTime">Mash Time</label>
-  <div class="col-md-4">
-  <input id="mashTime" name="mashTime" type="text" placeholder="Minutes" class="form-control input-md" required="">
-  <span class="help-block">How long does this bew need to mash?</span>
-  </div>
-</div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="boiltime">Boil Time</label>
+            <div class="col-md-4">
+              <input id="boilTime" name="boiltime" type="text" placeholder="Minutes" class="form-control input-md" required="">
+              <span class="help-block">How long do we need to boil?</span>
+            </div>
+          </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="boiltime">Boil Time</label>
-  <div class="col-md-4">
-  <input id="boiltime" name="boiltime" type="text" placeholder="Minutes" class="form-control input-md" required="">
-  <span class="help-block">How long do we need to boil?</span>
-  </div>
-</div>
+          <!-- ADDITIONS -->
+          <div id="addition1" class="panel panel-default clonedAddition">
+            <div class="panel-heading" id="addition_number_heading">Addition #1</div>
+            <div class="panel-body">
+              <div class="form-group">
+                <div class="col-md-4">
+                  <input id="additionName" name="additionName" type="text" placeholder="Addition" class="form-control input-md add-name">
+                  <span class="help-block">What is this?</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <input id="additionTime" name="additionTime" type="tel" placeholder="Minutes" class="form-control input-md add-time">
+                  <span class="help-block">When to add - (in remaining minutes)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            <button type="button" id="btnAdd" name="btnAdd" class="btn btn-info">New Addition</button>
+            <button type="button" id="btnDel" name="btnDel" class="btn btn-danger">Remove Addition</button>
+          </p>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="firstAdd">First Addition</label>
-  <div class="col-md-4">
-  <input id="firstAdd" name="firstAdd" type="text" placeholder="Minutes" class="form-control input-md">
-  <span class="help-block">When to add - (in remaining minutes)</span>
-  </div>
-</div>
-
-</fieldset>
-</form>
-
-      </div>
-
-    </div><!-- /.container -->
+        </fieldset>
+      </form>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    </div>
+    <!-- /.container -->
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script <script src="https://cdn.rawgit.com/moment/moment/develop/moment.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://rawgit.com/homebrewing/brauhausjs/master/dist/brauhaus.min.js"</script>
+    <script src="https://cdn.rawgit.com/moment/moment/develop/moment.js"></script>
+    <script src="https://rawgit.com/homebrewing/brauhausjs/master/dist/brauhaus.min.js"></script>
+    <script src='/js/app.js'></script>
   </body>
+
 </html>
